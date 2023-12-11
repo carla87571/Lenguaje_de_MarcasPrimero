@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h6>Formulario de Registro</h6>
+    <form action="" method="get" target="_blank">
+        <fieldset>
+            <legend class="form_subtitle">Datos Personales</legend>
+            <label class="form_items" for="name">
+                <span class="form_item">Nombre:</span><br>
+                <input class="form_input" type="text" name="name" id="name" pattern="[a-zA-Z]+" minlength="2" maxlength="50" required title="letras más de 2 y menos de 50">
+            </label>
+            <br>
+            <label for="lastname">
+                <span class="form_item" >Apellidos:</span><br>
+                <input class="form_input" type="text" name="lastname" id="lastname" pattern="[a-zA-Z]+" minlength="2" maxlength="128" required title="letras más de 2 y menos de 50" >
+            </label>
+            <br> 
+            <label for="email">
+                <span class="form_item">Email:</span><br>
+                <input class="form_input" type="email" name="email" id="email" required>
+            </label>
+            <br>
+            <label for="phone">
+                <span class="form_item">Teléfono:</span><br>
+                <input class="form_input" type="tel" name="phone" id="phone" required title="ejemplo: +51 952101010">
+            </label>
+            <br>
+            <label for="photo">
+                <span class="form_item">Adjuntar Fotografía:</span>
+                <input type="file" name="photo" id="photo"><textarea class="form_photo_input" name="photo" id="photo" cols="10" rows="6"></textarea>
+            </label>
+            <br>
+            <button class="button_submit" type="submit">Enviar</button>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend class="form_subtitle">Perfil del Usuario</legend>
+            <label for="question">
+                <span class="form_item">¿Cuál es el tema que más te interesa de las Jornadas?</span><br>
+                <textarea class="form_photo_input" name="question" id="question" cols="40" rows="4" required></textarea>
+            </label>
+            <br>
+            <label for="profession">
+                <span class="form_item" >Actividad Profesional</span><br>
+                <input class="form_input" list="profession" required>
+                <datalist id="profession">
+                    <option value="Estudiante bachillerato"></option>
+                    <option value="Estudiante universitario"></option>
+                    <option value="Doctorado"></option>
+                    <option value="Profesional Informático"></option>
+                    <option value="Profesor"></option>
+                    <option value="otros"></option>
+                </datalist>
+            </label>
+            <br>
+            <label for="workshop">
+                <span  class="form_item">Talleres</span><br>
+                <input class="form_input" list="workshop" required>
+                <datalist id="workshop">
+                    <option value="Contar historias en video"></option>
+                    <option value="La crítica en la era digital"></option>
+                    <option value="El sueño de empezar una iniciativa periodística"></option>
+                    <option value="Geoperiodismo de datos"></option>
+                    <option value="Periodismo sin fronteras"></option>
+                    <option value="Del terreno a la página"></option>
+                </datalist> 
+            </label>
+            <br>
+            <label for="attend">
+                <span class="form_item" >Asistir a las jornadas</span><br>
+                <input class="form_input" list="attend" required>
+                <datalist id="attend">
+                    <option value="Asistiré los dos días"></option>
+                    <option value="Asistiré el 3 de abril"></option>
+                    <option value="Asistiré el 4 de abril"></option>
+                </datalist> 
+            </label>
+            <br>
+            <label for="checkbox">
+                <input type="checkbox" required>
+                <span class="form_item_iread" >Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protecciónde datos</span>
+            </label>
+            <br>
+            <button class="button_submit" type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
